@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.graise.ansafn.managelifeblood.User.User;
+import com.graise.ansafn.managelifeblood.EligibilityCriteria.EligibilityCriteria;
 
 import java.util.List;
 
@@ -15,24 +15,26 @@ import java.util.List;
  * Created by ansaf.n on 2/25/2018.
  */
 
-public class CustomAdapter  extends BaseAdapter {
+/*Converter class for EligibilityCriteria to display as a list*/
+
+public class CustomAdapter extends BaseAdapter {
 
     private Context mContext;
-    private List<User> lstDonors;
+    private List<EligibilityCriteria> lstCriterias;
 
-    public CustomAdapter(Context mContext, List<User> lstDonors) {
+    public CustomAdapter(Context mContext, List<EligibilityCriteria> lstCriterias) {
         this.mContext = mContext;
-        this.lstDonors = lstDonors;
+        this.lstCriterias = lstCriterias;
     }
 
     @Override
     public int getCount() {
-        return lstDonors.size();
+        return lstCriterias.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return lstDonors.get(position);
+        return lstCriterias.get(position);
     }
 
     @Override
@@ -46,7 +48,14 @@ public class CustomAdapter  extends BaseAdapter {
         View view1 = inflater.inflate(R.layout.row,null);
 
         TextView txtUser = (TextView)view1.findViewById(R.id.txtCriteria);
-        txtUser.setText(lstDonors.get(position).getUsername());
+        txtUser.setText(lstCriterias.get(position).getCriteria());
+
+        TextView txtValue = (TextView)view1.findViewById(R.id.txtValue);
+        txtValue.setText(lstCriterias.get(position).getValue());
+
+        TextView txtPrioity = (TextView)view1.findViewById(R.id.txtPriority);
+        txtPrioity.setText(lstCriterias.get(position).getPriority());
+
 
         return view1;
 
