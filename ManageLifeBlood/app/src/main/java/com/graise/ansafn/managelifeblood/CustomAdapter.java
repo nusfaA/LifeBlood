@@ -8,6 +8,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.graise.ansafn.managelifeblood.EligibilityCriteria.EligibilityCriteria;
+import com.graise.ansafn.managelifeblood.R;
 
 import java.util.List;
 

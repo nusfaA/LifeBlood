@@ -10,18 +10,28 @@ import java.time.Instant;
 
 public class ActivityMenu extends AppCompatActivity {
 
-    Button btnEligibility;
+    private Button btnEligibility, btnStock;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        btnEligibility = (Button)findViewById(R.id.btnEligibility);
+        btnEligibility = (Button) findViewById(R.id.btnEligibility);
+        btnStock = (Button) findViewById(R.id.btnStock);
+
         btnEligibility.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ActivityMenu.this,ActivityMngcriteria.class);
+                Intent intent = new Intent(ActivityMenu.this, ActivityMngcriteria.class);
+                startActivity(intent);
+            }
+        });
+
+        btnStock.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityMenu.this, ActivityStockManagement.class);
                 startActivity(intent);
             }
         });

@@ -8,4 +8,5 @@
     <string name="lblPriority">Priority</string>
     <string name="lblValueEnter">Enter Value</string>
     <string name="lblPriorityEnter">Enter Priority</string>
+    <string name="btnStock">Stock Management</string>
 </resources>

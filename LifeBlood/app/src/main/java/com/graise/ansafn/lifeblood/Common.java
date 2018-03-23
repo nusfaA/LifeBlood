@@ -7,9 +7,9 @@ import com.graise.ansafn.lifeblood.Donor.Donor;
  */
 
 public class Common {
-    private static String DB_NAME="smartdonor";
+    private static String DB_NAME="lifebloodreg";
     public static String COLLECTION_NAME="donor";
-    private static String API_KEY="AsGBGvCaC0EeLltsDrusSrIy_KayOXGT";
+    private static String API_KEY="pmt_ndxPT0bqszftCsrdF3OKLM6q0XMr";
 
     public static String getAddressSingle(Donor donor){
         String baseUrl = String.format("https://api.mlab.com/api/1/databases/%s/collections/%s",DB_NAME,COLLECTION_NAME);

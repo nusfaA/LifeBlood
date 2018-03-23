@@ -4,74 +4,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.graise.ansafn.managelifeblood.ActivityMngcriteria"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.graise.ansafn.managelifeblood.ActivityMngcriteria">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/lblCondition"/>
+            android:text="@string/lblCondition" />
+
         <EditText
             android:id="@+id/edtCondition"
-            android:hint="@string/lblConditionEnter"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="@string/lblConditionEnter" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/lblValue"/>
+            android:text="@string/lblValue" />
+
         <EditText
             android:id="@+id/edtValue"
-            android:hint="@string/lblValueEnter"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="@string/lblValueEnter" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/lblPriority"/>
+            android:text="@string/lblPriority" />
+
         <EditText
             android:id="@+id/edtPriority"
-            android:hint="@string/lblPriorityEnter"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="@string/lblPriorityEnter" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
         <Button
             android:id="@+id/btnAdd"
-            android:text="@string/btnAdd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:text="@string/btnAdd" />
+
         <Button
             android:id="@+id/btnEdit"
-            android:text="@string/btnEdit"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/btnEdit" />
+
         <Button
             android:id="@+id/btnDelete"
-            android:text="@string/btnDelete"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="@string/btnDelete" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+
+            <TextView
+
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mainTextMargin"
+                android:layout_marginTop="@dimen/mainTextMargin"
+                android:text="@string/lblCondition"
+                android:textColor="@android:color/black" />
+
+            <TextView
+
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mainTextMargin"
+                android:layout_marginTop="@dimen/mainTextMargin"
+                android:text="@string/lblValue"
+                android:textColor="@android:color/black" />
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/mainTextMargin"
+                android:layout_marginTop="@dimen/mainTextMargin"
+                android:text="@string/lblPriority"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

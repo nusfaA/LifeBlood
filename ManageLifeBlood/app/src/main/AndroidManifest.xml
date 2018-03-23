@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.graise.ansafn.managelifeblood">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".ActivityMenu" />
         <activity android:name=".ActivityMngcriteria" />
-        <activity android:name=".ActivityUserreg"></activity>
+        <activity android:name=".ActivityUserreg" />
+        <activity android:name=".ActivityStockManagement"></activity>
     </application>
 
 </manifest>
