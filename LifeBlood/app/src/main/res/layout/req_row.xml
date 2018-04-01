@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/btnMargin"
+    android:background="@color/lbGreen"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtBlodGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mainTextMargin"
+        android:layout_marginLeft="@dimen/leftMargin"
+        android:text="@string/noreqfound"
+        android:textColor="@color/lbRed"
+        android:textSize="@dimen/largeText" />
+
+    <TextView
+        android:id="@+id/txtQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mainTextMargin"
+        android:layout_marginLeft="@dimen/btnMargin"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/mediumText" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/mainTextMargin"
+        android:layout_marginLeft="@dimen/btnMargin"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/mediumText" />
+
+</LinearLayout>

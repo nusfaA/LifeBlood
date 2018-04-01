@@ -8,32 +8,29 @@ import android.widget.Button;
 
 public class ActivityMain extends AppCompatActivity {
 
-    Button btnSgnUp,btnLogIn;
+    Button btnSgnUp, btnLogIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btnLogIn = (Button)findViewById(R.id.btnLogIn);
+        btnLogIn = (Button) findViewById(R.id.btnLogIn);
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                //authenticate login.....
-
-                //once logged in
-                Intent intent = new Intent(ActivityMain.this,ActivityMenu.class);
+                Intent intent = new Intent(ActivityMain.this, ActivityLogin.class);
                 startActivity(intent);
 
             }
         });
 
-        btnSgnUp = (Button)findViewById(R.id.btnSignUp);
+        btnSgnUp = (Button) findViewById(R.id.btnSignUp);
         btnSgnUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ActivityMain.this,ActivityUserreg.class);
+                Intent intent = new Intent(ActivityMain.this, ActivityUserreg.class);
                 startActivity(intent);
             }
         });

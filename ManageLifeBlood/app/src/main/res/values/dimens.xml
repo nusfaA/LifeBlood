@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="lblwidth" type="dimen">120dp</item>
+    <dimen name="lblText">160dp</dimen>
+    <dimen name="btnWidth">150dp</dimen>
+    <dimen name="basicMargin">8dp</dimen>
+    <dimen name="mainTextMargin">5dp</dimen>
+    <dimen name="btnMargin">40dp</dimen>
+    <dimen name="logosize">250dp</dimen>
+    <dimen name="btnPadding">25dp</dimen>
+    <dimen name="btnPadding2">32dp</dimen>
+    <dimen name="btnPaddingLeft">22dp</dimen>
+    <dimen name="btnHeight">50dp</dimen>
+</resources>

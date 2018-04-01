@@ -7,8 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.graise.ansafn.lifeblood.Donor.Donor;
-import com.graise.ansafn.lifeblood.R;
+import com.graise.ansafn.lifeblood.DonationRequest.DonationRequest;
 
 import java.util.List;
 
@@ -19,21 +18,21 @@ import java.util.List;
 public class CustomAdapter extends BaseAdapter {
 
     private Context mContext;
-    private List<Donor> lstDonors;
+    private List<DonationRequest> lstDonReq;
 
-    public CustomAdapter(Context mContext, List<Donor> lstDonors) {
+    public CustomAdapter(Context mContext, List<DonationRequest> lstDonors) {
         this.mContext = mContext;
-        this.lstDonors = lstDonors;
+        this.lstDonReq = lstDonors;
     }
 
     @Override
     public int getCount() {
-        return lstDonors.size();
+        return lstDonReq.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return lstDonors.get(position);
+        return lstDonReq.get(position);
     }
 
     @Override
@@ -43,11 +42,20 @@ public class CustomAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
-        LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view1 = inflater.inflate(R.layout.row,null);
+        LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view1 = inflater.inflate(R.layout.req_row, null);
 
-        TextView txtUser = (TextView)view1.findViewById(R.id.txtUser);
-        txtUser.setText(lstDonors.get(position).getUsername());
+        TextView txtBloodGroup = (TextView) view1.findViewById(R.id.txtBlodGroup);
+        TextView txtQuant = (TextView) view1.findViewById(R.id.txtQuantity);
+        TextView txtDate = (TextView) view1.findViewById(R.id.txtDate);
+
+        String txt1 = lstDonReq.get(position).getGroup();
+        String txt2 = lstDonReq.get(position).getQuantity() + " Donors Required";
+        String txt3 = "Before " + lstDonReq.get(position).getEndDate();
+
+        txtBloodGroup.setText(txt1);
+        txtQuant.setText(txt2);
+        txtDate.setText(txt3);
 
         return view1;
 

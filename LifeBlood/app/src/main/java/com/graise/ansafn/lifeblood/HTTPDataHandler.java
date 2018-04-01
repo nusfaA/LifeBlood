@@ -16,34 +16,34 @@ import java.nio.charset.StandardCharsets;
  */
 
 public class HTTPDataHandler {
-    static String stream=null;
+    static String stream = null;
 
-    public HTTPDataHandler(){
+    public HTTPDataHandler() {
 
     }
 
-    public String GetHTTPData(String urlstring){
-        try{
-             URL url = new URL(urlstring);
-             HttpURLConnection urlconnection = (HttpURLConnection)url.openConnection();
+    public String GetHTTPData(String urlstring) {
+        try {
+            URL url = new URL(urlstring);
+            HttpURLConnection urlconnection = (HttpURLConnection) url.openConnection();
 
-             //connection status
-             if (urlconnection.getResponseCode() == 200){
-                 InputStream in = new BufferedInputStream(urlconnection.getInputStream());
+            //connection status
+            if (urlconnection.getResponseCode() == 200) {
+                InputStream in = new BufferedInputStream(urlconnection.getInputStream());
 
-                 BufferedReader r = new BufferedReader(new InputStreamReader(in));
-                 StringBuilder sb = new StringBuilder();
-                 String line;
+                BufferedReader r = new BufferedReader(new InputStreamReader(in));
+                StringBuilder sb = new StringBuilder();
+                String line;
 
-                 while ((line = r.readLine()) != null){
-                     sb.append(line);
-                     stream = sb.toString();
-                     urlconnection.disconnect();
-                 }
+                while ((line = r.readLine()) != null) {
+                    sb.append(line);
+                    stream = sb.toString();
+                    urlconnection.disconnect();
+                }
 
-             }else{
+            } else {
 
-             }
+            }
 
         } catch (MalformedURLException e) {
             e.printStackTrace();
@@ -54,10 +54,10 @@ public class HTTPDataHandler {
         return stream;
     }
 
-    public void PostHTTPData(String urlstring,String json){
-        try{
+    public void PostHTTPData(String urlstring, String json) {
+        try {
             URL url = new URL(urlstring);
-            HttpURLConnection urlconnection = (HttpURLConnection)url.openConnection();
+            HttpURLConnection urlconnection = (HttpURLConnection) url.openConnection();
 
             urlconnection.setRequestMethod("POST");
             urlconnection.setDoOutput(true);
@@ -68,7 +68,7 @@ public class HTTPDataHandler {
             urlconnection.setFixedLengthStreamingMode(length);
             urlconnection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
             urlconnection.connect();
-            try(OutputStream os =urlconnection.getOutputStream()) {
+            try (OutputStream os = urlconnection.getOutputStream()) {
                 os.write(out);
             }
 
@@ -79,10 +79,10 @@ public class HTTPDataHandler {
         }
     }
 
-    public void PutHTTPData(String urlstring,String newValue){
-        try{
+    public void PutHTTPData(String urlstring, String newValue) {
+        try {
             URL url = new URL(urlstring);
-            HttpURLConnection urlconnection = (HttpURLConnection)url.openConnection();
+            HttpURLConnection urlconnection = (HttpURLConnection) url.openConnection();
 
             urlconnection.setRequestMethod("PUT");
             urlconnection.setDoOutput(true);
@@ -93,7 +93,7 @@ public class HTTPDataHandler {
             urlconnection.setFixedLengthStreamingMode(length);
             urlconnection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
             urlconnection.connect();
-            try(OutputStream os =urlconnection.getOutputStream()) {
+            try (OutputStream os = urlconnection.getOutputStream()) {
                 os.write(out);
             }
 
@@ -105,10 +105,10 @@ public class HTTPDataHandler {
 
     }
 
-    public void DeleteHTTPData(String urlstring,String json){
-        try{
+    public void DeleteHTTPData(String urlstring, String json) {
+        try {
             URL url = new URL(urlstring);
-            HttpURLConnection urlconnection = (HttpURLConnection)url.openConnection();
+            HttpURLConnection urlconnection = (HttpURLConnection) url.openConnection();
 
             urlconnection.setRequestMethod("DELETE");
             urlconnection.setDoOutput(true);
@@ -119,7 +119,7 @@ public class HTTPDataHandler {
             urlconnection.setFixedLengthStreamingMode(length);
             urlconnection.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
             urlconnection.connect();
-            try(OutputStream os =urlconnection.getOutputStream()) {
+            try (OutputStream os = urlconnection.getOutputStream()) {
                 os.write(out);
             }
 

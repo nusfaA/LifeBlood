@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.graise.ansafn.lifeblood.ActivityDonorRegistration">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mainTextMargin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/donorName"
+            android:layout_width="84dp"
+            android:layout_height="28dp"
+            android:text="@string/donor_name"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <EditText
+            android:id="@+id/editdonorname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/entername"
+            android:inputType="textPersonName"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mainTextMargin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblage"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="97dp" />
+
+        <EditText
+            android:id="@+id/edit_Age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_age"
+            android:inputType="number"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="81dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mainTextMargin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblmobile"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="156dp" />
+
+        <EditText
+            android:id="@+id/editMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/enter_contactno"
+            android:inputType="phone"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="138dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mainTextMargin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lbladdress"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="218dp" />
+
+        <EditText
+            android:id="@+id/editaddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/address_line"
+            android:inputType="textPostalAddress"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="197dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mainTextMargin"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bloodgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblbloodgroup"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="273dp" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="238dp"
+            android:layout_height="38dp"
+            android:entries="@array/lblbloodgroup_arrays"
+            tools:layout_editor_absoluteX="138dp"
+            tools:layout_editor_absoluteY="268dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/lb_btng_small"
+        android:text="@string/lblbtnregister"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="339dp" />
+
+</LinearLayout>

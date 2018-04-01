@@ -11,11 +11,12 @@ public class User {
     private String username;
     private String name_first;
     private String name_last;
-    private Date dob;
+    private String dob;
     private String contactNumber;
     private String email;
     private String location;
     private String roleName;
+    private String password;
 
     public Id get_id() {
         return _id;
@@ -49,14 +50,6 @@ public class User {
         this.name_last = name_last;
     }
 
-    public Date getDob() {
-        return dob;
-    }
-
-    public void setDob(Date dob) {
-        this.dob = dob;
-    }
-
     public String getContactNumber() {
         return contactNumber;
     }
@@ -87,5 +80,21 @@ public class User {
 
     public void setRoleName(String roleName) {
         this.roleName = roleName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
     }
 }

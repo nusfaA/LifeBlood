@@ -4,48 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.graise.ansafn.lifeblood.ActivityMain"
-    android:orientation="vertical">
-    <LinearLayout
-        android:orientation="horizontal"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/donor_fname"/>
-     <EditText
-         android:id="@+id/edtFName"
-         android:hint="Enter First Name"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content" />
-    </LinearLayout>
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    tools:context="com.graise.ansafn.lifeblood.ActivityMain">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:background="@drawable/bg_base"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lstRequest"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.5"
+        android:gravity="center"
+        android:orientation="vertical">
+
         <Button
-            android:id="@+id/btnAdd"
-            android:text="Add"
+            android:id="@+id/btnSignUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
-        <Button
-            android:id="@+id/btnEdit"
-            android:text="Edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <Button
-        android:id="@+id/btnDelete"
-        android:text="Delete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+            android:layout_margin="@dimen/btnMargin"
+            android:text="@string/becomeDonor"
+            android:background="@drawable/lb_btnp_small"/>
 
-    </LinearLayout>
-    
-    <ListView
-        android:id="@+id/lstViewDet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></ListView>
+
+    </RelativeLayout>
+
 </LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    tools:context="com.graise.ansafn.managelifeblood.ActivityLogin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/lblwidth"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mainTextMargin"
+            android:text="@string/lblUserName" />
+
+        <EditText
+            android:id="@+id/edtUser"
+            android:layout_width="@dimen/lblText"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mainTextMargin"
+            android:hint="@string/lblEnterUserName" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/lblwidth"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mainTextMargin"
+            android:text="@string/lblPassword" />
+
+        <EditText
+            android:id="@+id/edtPassword"
+            android:layout_width="@dimen/lblText"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/mainTextMargin"
+            android:hint="@string/lblEnterPassword"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/basicMargin"
+            android:background="@drawable/lb_btnp_small"
+            android:gravity="center"
+            android:paddingLeft="@dimen/btnPaddingLeft"
+            android:paddingTop="@dimen/btnPadding"
+            android:text="@string/btnLogIn" />
+
+    </LinearLayout>
+
+</LinearLayout>

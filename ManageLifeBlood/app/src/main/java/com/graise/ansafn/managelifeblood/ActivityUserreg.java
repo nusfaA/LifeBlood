@@ -1,7 +1,9 @@
 package com.graise.ansafn.managelifeblood;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.AsyncTask;
@@ -16,6 +18,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Calendar;
+import java.util.Random;
 
 public class ActivityUserreg extends AppCompatActivity {
 
@@ -83,12 +86,22 @@ public class ActivityUserreg extends AppCompatActivity {
     class PostData extends AsyncTask<String, String, String> {
 
         ProgressDialog pd = new ProgressDialog(ActivityUserreg.this);
+
         String firstname;
         String lastname;
         String dob;
         String contactnum;
         String email;
         String username;
+
+        //password
+        Random r = new Random();
+        int i1 = r.nextInt(9 - 1) + 0;
+        int i2 = r.nextInt(9 - 1) + 0;
+        int i3 = r.nextInt(9 - 1) + 0;
+        int i4 = r.nextInt(9 - 1) + 0;
+
+        String password = String.valueOf(i1) + String.valueOf(i2) + String.valueOf(i3) + String.valueOf(i4);
 
         public PostData(String firstname, String lastname, String dob, String contactnum, String email) {
             this.firstname = firstname;
@@ -122,7 +135,8 @@ public class ActivityUserreg extends AppCompatActivity {
                     "\"contactNumber\":\"" + contactnum + "\"," +
                     "\"email\":\"" + email + "\"," +
                     "\"location\":\"" + "Colombo" + "\"," +
-                    "\"roleName\":\"" + "Admin" + "\"" +
+                    "\"roleName\":\"" + "Admin" + "\"," +
+                    "\"password\":\"" + password + "\"" +
                     "}";
 
             hh.PostHTTPData(urlString, json);
@@ -137,7 +151,27 @@ public class ActivityUserreg extends AppCompatActivity {
 
             pd.dismiss();
 
+            AlertDialog alertDialog = new AlertDialog.Builder(ActivityUserreg.this).create();
+            alertDialog.setTitle("Success");
+            alertDialog.setMessage("Your Account successfully is created. Your Username is " + username + " and your Password is " + password + " !");
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            reset();
+                            dialog.dismiss();
+                        }
+                    });
+            alertDialog.show();
+
         }
+
     }
 
+    private void reset() {
+        edtFname.setText("");
+        edtLname.setText("");
+        edtConNum.setText("");
+        edtEmail.setText("");
+        disDob.setText(null);
+    }
 }

@@ -8,44 +8,54 @@
     tools:context="com.graise.ansafn.managelifeblood.ActivityMenu">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/loggedin"
             android:layout_margin="@dimen/btnMargin"
-            />
+            android:text="@string/loggedin" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
         <Button
             android:id="@+id/btnEligibility"
-            android:text="@string/btneligibility"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btnMargin"
-            />
+            android:layout_margin="@dimen/basicMargin"
+            android:background="@drawable/lb_btnp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/btnPadding2"
+            android:paddingTop="@dimen/btnPadding2"
+            android:text="@string/btneligibility" />
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
         <Button
             android:id="@+id/btnStock"
-            android:text="@string/btnStock"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btnMargin"
-            />
+            android:layout_margin="@dimen/basicMargin"
+            android:background="@drawable/lb_btnp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/btnPadding2"
+            android:paddingTop="@dimen/btnPadding2"
+            android:text="@string/btnStock" />
 
 
     </LinearLayout>

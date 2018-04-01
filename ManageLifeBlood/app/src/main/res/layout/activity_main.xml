@@ -8,35 +8,47 @@
     tools:context="com.graise.ansafn.managelifeblood.ActivityMain">
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/welcome"
-            android:layout_margin="@dimen/btnMargin"
-            />
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imglogo"
+            android:layout_width="@dimen/logosize"
+            android:layout_height="@dimen/logosize"
+            android:layout_gravity="center"
+            android:src="@drawable/lb_logo" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
         <Button
             android:id="@+id/btnSignUp"
-            android:text="@string/welcomebtn"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btnMargin"
-            />
+            android:layout_margin="@dimen/basicMargin"
+            android:background="@drawable/lb_btnp_small"
+            android:gravity="center"
+            android:paddingLeft="@dimen/btnPaddingLeft"
+            android:paddingTop="@dimen/btnPadding"
+            android:text="@string/welcomebtn" />
+
         <Button
             android:id="@+id/btnLogIn"
-            android:text="@string/welcomebtn1"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btnMargin"/>
+            android:layout_margin="@dimen/basicMargin"
+            android:background="@drawable/lb_btnp_small"
+            android:gravity="center"
+            android:paddingLeft="@dimen/btnPaddingLeft"
+            android:paddingTop="@dimen/btnPadding"
+            android:text="@string/welcomebtn1" />
 
 
     </LinearLayout>

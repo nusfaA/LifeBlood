@@ -1,4 +1,28 @@
 <resources>
-    <string name="app_name" translatable="false">LifeBlood</string>
-    <string name="donor_fname">First Name</string>
+    <string name="app_name">LifeBlood</string>
+    <string name="welcome">Welcome</string>
+    <string name="becomeDonor">Become a Donor</string>
+    <string name="lblName">Name</string>
+    <string name="lblage">Age</string>
+    <string name="lblmobile">Mobile No.</string>
+    <string name="lbladdress">Address</string>
+    <string name="lblbloodgroup">Blood Group</string>
+    <string name="lblbtnregister">Register</string>
+    <string name="noreqfound">Yay! No Requirements Found.</string>
+    <string name="requests">Requests</string>
+    <string name="donor_name">Donor Name</string>
+    <string name="enter_contactno">Enter Contact No.</string>
+    <string name="address_line">Enter Address</string>
+    <string name="enter_age">Enter Age</string>
+    <string name="entername">Enter Name</string>
+    <string-array name="lblbloodgroup_arrays">
+        <item>A+(Positive)</item>
+        <item>A-(Negative)</item>
+        <item>B+(Positive)</item>
+        <item>B-(Negative)</item>
+        <item>O+(Positive)</item>
+        <item>O-(Negative)</item>
+        <item>AB+(Positive)</item>
+        <item>AB-(Negative)</item>
+    </string-array>
 </resources>

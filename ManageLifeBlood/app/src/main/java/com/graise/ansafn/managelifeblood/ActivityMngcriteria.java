@@ -22,7 +22,7 @@ public class ActivityMngcriteria extends AppCompatActivity {
 
     private static final String TAG = "ActivityMngCri";
 
-    private Button btnAdd,btnEdit,btnDelete;
+    private Button btnAdd, btnEdit, btnDelete;
     private EditText edtCondi, edtValue, edtPriority;
 
     private ListView lstViewDet;
@@ -36,13 +36,13 @@ public class ActivityMngcriteria extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mngcriteria);
 
-        lstViewDet = (ListView)findViewById(R.id.lstViewDet);
-        btnAdd = (Button)findViewById(R.id.btnAdd);
-        btnEdit = (Button)findViewById(R.id.btnEdit);
-        btnDelete = (Button)findViewById(R.id.btnDelete);
+        lstViewDet = (ListView) findViewById(R.id.lstViewDet);
+        btnAdd = (Button) findViewById(R.id.btnAdd);
+        btnEdit = (Button) findViewById(R.id.btnEdit);
+        btnDelete = (Button) findViewById(R.id.btnDelete);
         edtCondi = (EditText) findViewById(R.id.edtCondition);
-        edtValue = (EditText)findViewById(R.id.edtValue);
-        edtPriority = (EditText)findViewById(R.id.edtPriority);
+        edtValue = (EditText) findViewById(R.id.edtValue);
+        edtPriority = (EditText) findViewById(R.id.edtPriority);
 
         //load data
         new GetData().execute(Common.getEligibilityAPI());
@@ -51,7 +51,7 @@ public class ActivityMngcriteria extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new PostData(edtCondi.getText().toString(),edtValue.getText().toString(),edtPriority.getText().toString()).execute(Common.getEligibilityAPI());
+                new PostData(edtCondi.getText().toString(), edtValue.getText().toString(), edtPriority.getText().toString()).execute(Common.getEligibilityAPI());
             }
         });
 
@@ -59,7 +59,7 @@ public class ActivityMngcriteria extends AppCompatActivity {
         btnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new PutData(edtCondi.getText().toString(),edtValue.getText().toString(),edtPriority.getText().toString()).execute(Common.getEligibilitySingle(eliCriSelected));
+                new PutData(edtCondi.getText().toString(), edtValue.getText().toString(), edtPriority.getText().toString()).execute(Common.getEligibilitySingle(eliCriSelected));
             }
         });
 
@@ -67,7 +67,7 @@ public class ActivityMngcriteria extends AppCompatActivity {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                new DeleteData(edtCondi.getText().toString(),edtValue.getText().toString(),edtPriority.getText().toString()).execute(Common.getEligibilitySingle(eliCriSelected));
+                new DeleteData(edtCondi.getText().toString(), edtValue.getText().toString(), edtPriority.getText().toString()).execute(Common.getEligibilitySingle(eliCriSelected));
             }
         });
 
@@ -78,13 +78,18 @@ public class ActivityMngcriteria extends AppCompatActivity {
                 eliCriSelected = criterias.get(position);
 
                 edtCondi.setText(eliCriSelected.getCriteria());
+                edtValue.setText(eliCriSelected.getValue());
+                edtPriority.setText(eliCriSelected.getPriority());
+                btnEdit.setVisibility(View.VISIBLE);
+                btnDelete.setVisibility(View.VISIBLE);
+                btnAdd.setVisibility(View.INVISIBLE);
             }
         });
     }
 
 
     //process data
-    class GetData extends AsyncTask<String,Void,String> {
+    class GetData extends AsyncTask<String, Void, String> {
 
         ProgressDialog pd = new ProgressDialog(ActivityMngcriteria.this);
 
@@ -103,8 +108,8 @@ public class ActivityMngcriteria extends AppCompatActivity {
             String urlString = params[0];
 
             HTTPDataHandler http = new HTTPDataHandler();
-            stream =http.GetHTTPData(urlString);
-            return  stream;
+            stream = http.GetHTTPData(urlString);
+            return stream;
         }
 
         @Override
@@ -112,9 +117,10 @@ public class ActivityMngcriteria extends AppCompatActivity {
             super.onPostExecute(s);
 
             Gson gson = new Gson();
-            Type listType = new TypeToken<List<EligibilityCriteria>>(){}.getType();
-            criterias = gson.fromJson(s,listType);
-            CustomAdapter adapter = new CustomAdapter(getApplicationContext(),criterias);
+            Type listType = new TypeToken<List<EligibilityCriteria>>() {
+            }.getType();
+            criterias = gson.fromJson(s, listType);
+            CustomAdapter adapter = new CustomAdapter(getApplicationContext(), criterias);
             lstViewDet.setAdapter(adapter);
             pd.dismiss();
         }
@@ -122,7 +128,7 @@ public class ActivityMngcriteria extends AppCompatActivity {
     }
 
     //Add new User
-    class PostData extends  AsyncTask<String,String,String>{
+    class PostData extends AsyncTask<String, String, String> {
 
         ProgressDialog pd = new ProgressDialog(ActivityMngcriteria.this);
         String criteria;
@@ -150,13 +156,13 @@ public class ActivityMngcriteria extends AppCompatActivity {
             String code = "lbu1800" + prority;
 
             HTTPDataHandler hh = new HTTPDataHandler();
-            String json =  "{\"ec_code\":\""+code+ "\"," +
-                            "\"criteria\":\"" + criteria+ "\"," +
-                            "\"value\":\"" + value+ "\"," +
-                            "\"priority\":\"" + prority + "\"" +
-                            "}";
+            String json = "{\"ec_code\":\"" + code + "\"," +
+                    "\"criteria\":\"" + criteria + "\"," +
+                    "\"value\":\"" + value + "\"," +
+                    "\"priority\":\"" + prority + "\"" +
+                    "}";
 
-            hh.PostHTTPData(urlString,json);
+            hh.PostHTTPData(urlString, json);
 
             return "";
 
@@ -168,6 +174,7 @@ public class ActivityMngcriteria extends AppCompatActivity {
 
             //refresh data
             new GetData().execute(Common.getEligibilityAPI());
+            refresh();
 
             pd.dismiss();
 
@@ -175,7 +182,7 @@ public class ActivityMngcriteria extends AppCompatActivity {
     }
 
     //Edit new User
-    class PutData extends  AsyncTask<String,String,String>{
+    class PutData extends AsyncTask<String, String, String> {
 
         ProgressDialog pd = new ProgressDialog(ActivityMngcriteria.this);
         String criteria;
@@ -204,13 +211,13 @@ public class ActivityMngcriteria extends AppCompatActivity {
             String code = "lbu1800" + prority;
 
             HTTPDataHandler hh = new HTTPDataHandler();
-            String json =  "{\"ec_code\":\""+code+ "\"," +
-                    "\"criteria\":\"" + criteria+ "\"," +
-                    "\"value\":\"" + value+ "\"," +
+            String json = "{\"ec_code\":\"" + code + "\"," +
+                    "\"criteria\":\"" + criteria + "\"," +
+                    "\"value\":\"" + value + "\"," +
                     "\"priority\":\"" + prority + "\"" +
                     "}";
 
-            hh.PutHTTPData(urlString,json);
+            hh.PutHTTPData(urlString, json);
 
             return "";
 
@@ -222,6 +229,7 @@ public class ActivityMngcriteria extends AppCompatActivity {
 
             //refresh data
             new GetData().execute(Common.getEligibilityAPI());
+            refresh();
 
             pd.dismiss();
 
@@ -229,7 +237,7 @@ public class ActivityMngcriteria extends AppCompatActivity {
     }
 
     //Delete  User
-    class DeleteData extends  AsyncTask<String,String,String>{
+    class DeleteData extends AsyncTask<String, String, String> {
 
         ProgressDialog pd = new ProgressDialog(ActivityMngcriteria.this);
         String criteria;
@@ -257,13 +265,13 @@ public class ActivityMngcriteria extends AppCompatActivity {
             String code = "lbu1800" + prority;
 
             HTTPDataHandler hh = new HTTPDataHandler();
-            String json =  "{\"ec_code\":\""+code+ "\"," +
-                    "\"criteria\":\"" + criteria+ "\"," +
-                    "\"value\":\"" + value+ "\"," +
+            String json = "{\"ec_code\":\"" + code + "\"," +
+                    "\"criteria\":\"" + criteria + "\"," +
+                    "\"value\":\"" + value + "\"," +
                     "\"priority\":\"" + prority + "\"" +
                     "}";
 
-            hh.DeleteHTTPData(urlString,json);
+            hh.DeleteHTTPData(urlString, json);
 
             return "";
 
@@ -275,9 +283,19 @@ public class ActivityMngcriteria extends AppCompatActivity {
 
             //refresh data
             new GetData().execute(Common.getEligibilityAPI());
+            refresh();
 
             pd.dismiss();
 
         }
+    }
+
+    private void refresh() {
+        edtCondi.setText("");
+        edtValue.setText("");
+        edtPriority.setText("");
+        btnEdit.setVisibility(View.INVISIBLE);
+        btnDelete.setVisibility(View.INVISIBLE);
+        btnAdd.setVisibility(View.VISIBLE);
     }
 }

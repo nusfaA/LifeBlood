@@ -9,4 +9,10 @@
     <string name="lblValueEnter">Enter Value</string>
     <string name="lblPriorityEnter">Enter Priority</string>
     <string name="btnStock">Stock Management</string>
+    <string name="lblUserName">User Name</string>
+    <string name="lblEnterUserName">Enter User Name</string>
+    <string name="lblEnterPassword">Enter Password</string>
+    <string name="lblPassword">Password</string>
+    <string name="btnSignUp">Sign Up</string>
+    <string name="btnLogIn">Log In</string>
 </resources>

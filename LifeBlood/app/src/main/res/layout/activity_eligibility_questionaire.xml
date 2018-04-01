@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="100dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="12pt" />
+
+    <Button
+        android:id="@+id/btnyes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvQuestion"
+        android:layout_below="@+id/tvQuestion"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="69dp"
+        android:text="YES" />
+
+    <Button
+        android:id="@+id/btnno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/tvQuestion"
+        android:layout_alignTop="@+id/btnyes"
+        android:layout_marginEnd="110dp"
+        android:text="NO" />
+
+</RelativeLayout>

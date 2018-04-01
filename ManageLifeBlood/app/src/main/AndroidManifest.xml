@@ -6,9 +6,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/lb_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/lb_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ActivityMain">
@@ -21,7 +21,8 @@
         <activity android:name=".ActivityMenu" />
         <activity android:name=".ActivityMngcriteria" />
         <activity android:name=".ActivityUserreg" />
-        <activity android:name=".ActivityStockManagement"></activity>
+        <activity android:name=".ActivityStockManagement" />
+        <activity android:name=".ActivityLogin"></activity>
     </application>
 
 </manifest>

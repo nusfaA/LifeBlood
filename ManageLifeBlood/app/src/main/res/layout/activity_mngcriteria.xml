@@ -10,10 +10,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/basicMargin"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/lblwidth"
             android:layout_height="wrap_content"
             android:text="@string/lblCondition" />
 
@@ -27,10 +28,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/basicMargin"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/lblwidth"
             android:layout_height="wrap_content"
             android:text="@string/lblValue" />
 
@@ -44,10 +46,11 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/basicMargin"
         android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="@dimen/lblwidth"
             android:layout_height="wrap_content"
             android:text="@string/lblPriority" />
 
@@ -55,66 +58,90 @@
             android:id="@+id/edtPriority"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="@string/lblPriorityEnter" />
+            android:hint="@string/lblPriorityEnter"
+            android:inputType="number"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/btnAdd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/btnAdd" />
+            android:layout_width="@dimen/btnWidth"
+            android:layout_height="@dimen/btnHeight"
+            android:layout_margin="@dimen/basicMargin"
+            android:background="@drawable/lb_btnp_small"
+            android:gravity="center"
+            android:paddingTop="@dimen/basicMargin"
+            android:text="@string/btnAdd"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/btnEdit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/btnEdit" />
+            android:layout_width="@dimen/btnWidth"
+            android:layout_height="@dimen/btnHeight"
+            android:layout_margin="@dimen/basicMargin"
+            android:background="@drawable/lb_btng_small"
+            android:gravity="center"
+            android:paddingTop="@dimen/basicMargin"
+            android:text="@string/btnEdit"
+            android:visibility="invisible" />
 
         <Button
             android:id="@+id/btnDelete"
+            android:layout_width="@dimen/btnWidth"
+            android:layout_height="@dimen/btnHeight"
+            android:layout_margin="@dimen/basicMargin"
+            android:background="@drawable/lb_btng_small"
+            android:gravity="center"
+            android:paddingTop="@dimen/basicMargin"
+            android:text="@string/btnDelete"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mainTextMargin"
+            android:layout_marginTop="@dimen/mainTextMargin"
+            android:text="@string/lblCondition"
+            android:textColor="@android:color/black" />
+
+        <TextView
+
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mainTextMargin"
+            android:layout_marginTop="@dimen/mainTextMargin"
+            android:text="@string/lblValue"
+            android:textColor="@android:color/black" />
+
+        <TextView
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/btnDelete" />
+            android:layout_marginLeft="@dimen/mainTextMargin"
+            android:layout_marginTop="@dimen/mainTextMargin"
+            android:text="@string/lblPriority"
+            android:textColor="@android:color/black" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-
-            <TextView
-
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mainTextMargin"
-                android:layout_marginTop="@dimen/mainTextMargin"
-                android:text="@string/lblCondition"
-                android:textColor="@android:color/black" />
-
-            <TextView
-
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mainTextMargin"
-                android:layout_marginTop="@dimen/mainTextMargin"
-                android:text="@string/lblValue"
-                android:textColor="@android:color/black" />
-
-            <TextView
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/mainTextMargin"
-                android:layout_marginTop="@dimen/mainTextMargin"
-                android:text="@string/lblPriority"
-                android:textColor="@android:color/black" />
-
-        </LinearLayout>
 
     </LinearLayout>
 
