@@ -11,4 +11,10 @@
     <dimen name="btnPadding2">32dp</dimen>
     <dimen name="btnPaddingLeft">22dp</dimen>
     <dimen name="btnHeight">50dp</dimen>
+    <dimen name="leftMargin">10dp</dimen>
+    <dimen name="lblMText">16dp</dimen>
+    <dimen name="Lwidth">150dp</dimen>
+    <dimen name="Mwidth">90dp</dimen>
+    <dimen name="smallMargin">4dp</dimen>
+    <dimen name="tvwidth">115dp</dimen>
 </resources>

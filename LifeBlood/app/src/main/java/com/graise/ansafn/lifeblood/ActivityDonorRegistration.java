@@ -19,7 +19,7 @@ public class ActivityDonorRegistration extends AppCompatActivity {
 
     //private TextView donorName, age, mobile, address, bloodgroup;
     private EditText editdonorName, editAge, editMobile, editAddress;
-    private Spinner bloodGroup;
+    private Spinner spBloodGroup;
     private Button btnregister;
 
     @Override
@@ -37,12 +37,15 @@ public class ActivityDonorRegistration extends AppCompatActivity {
         editAge = (EditText) findViewById(R.id.edit_Age);
         editMobile = (EditText) findViewById(R.id.editMobile);
         editAddress = (EditText) findViewById(R.id.editaddress);
+        spBloodGroup = (Spinner) findViewById(R.id.spinner);
 
         //Save data
         btnregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                new PostData(editdonorName.getText().toString(), editAge.getText().toString(), editMobile.getText().toString(), editAddress.getText().toString(), "A+(Positive)").execute(Common.getDonorAPI());
+                new PostData(editdonorName.getText().toString(), editAge.getText().toString(),
+                        editMobile.getText().toString(), editAddress.getText().toString(),
+                        spBloodGroup.getSelectedItem().toString()).execute(Common.getDonorAPI());
             }
         });
 

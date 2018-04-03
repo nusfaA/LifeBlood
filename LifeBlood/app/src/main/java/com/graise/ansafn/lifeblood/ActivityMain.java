@@ -21,7 +21,7 @@ import java.util.List;
 
 public class ActivityMain extends AppCompatActivity {
 
-    private Button btnSignUp;
+    private Button btnSignUp, btnReg, btnEliDet;
     private ListView lstRequest;
     List<DonationRequest> reqList = new ArrayList<DonationRequest>();
     DonationRequest reqSeleceted = new DonationRequest();
@@ -75,6 +75,28 @@ public class ActivityMain extends AppCompatActivity {
 
                 //send to Eligiblity Process for Donor Check-in
 
+            }
+
+        });
+
+
+        //Register Donors Temporary view
+        btnReg = (Button) findViewById(R.id.btnTempRegister);
+        btnReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityMain.this, ActivityDonorRegistration.class);
+                startActivity(intent);
+            }
+        });
+
+        //Eligibility Detection incorporating IOT Eligibility Detector
+        btnEliDet = (Button) findViewById(R.id.btnEligDetect);
+        btnEliDet.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ActivityMain.this, ActivityEligibilityDetection.class);
+                startActivity(intent);
             }
         });
     }

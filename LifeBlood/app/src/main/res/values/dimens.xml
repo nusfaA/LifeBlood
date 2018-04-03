@@ -3,6 +3,12 @@
     <dimen name="btnMargin">20dp</dimen>
     <dimen name="leftMargin">10dp</dimen>
     <dimen name="mainTextMargin">5dp</dimen>
-    <dimen name="largeText">32dp</dimen>
-    <dimen name="mediumText">24dp</dimen>
+    <dimen name="largeText">28dp</dimen>
+    <dimen name="mediumText">20dp</dimen>
+    <dimen name="btnWidth">250dp</dimen>
+    <dimen name="btnHeight">75dp</dimen>
+    <dimen name="marginHigh">40dp</dimen>
+    <dimen name="panelWidth">230dp</dimen>
+    <dimen name="btnHeight2">100dp</dimen>
+    <dimen name="logosize">120dp</dimen>
 </resources>

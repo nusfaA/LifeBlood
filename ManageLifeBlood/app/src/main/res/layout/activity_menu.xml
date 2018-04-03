@@ -15,7 +15,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btnMargin"
+            android:layout_margin="@dimen/smallMargin"
             android:text="@string/loggedin" />
 
     </LinearLayout>
@@ -30,8 +30,8 @@
             android:id="@+id/btnEligibility"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/basicMargin"
-            android:background="@drawable/lb_btnp"
+            android:layout_margin="@dimen/smallMargin"
+            android:background="@drawable/lb_btnp_small"
             android:gravity="center"
             android:paddingLeft="@dimen/btnPadding2"
             android:paddingTop="@dimen/btnPadding2"
@@ -50,12 +50,52 @@
             android:id="@+id/btnStock"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/basicMargin"
-            android:background="@drawable/lb_btnp"
+            android:layout_margin="@dimen/smallMargin"
+            android:background="@drawable/lb_btnp_small"
             android:gravity="center"
             android:paddingLeft="@dimen/btnPadding2"
             android:paddingTop="@dimen/btnPadding2"
             android:text="@string/btnStock" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnProcessDnr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/smallMargin"
+            android:background="@drawable/lb_btnp_small"
+            android:gravity="center"
+            android:paddingLeft="@dimen/btnPadding2"
+            android:paddingTop="@dimen/btnPadding2"
+            android:text="@string/btnProcessDonorReq" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnStatInf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/smallMargin"
+            android:background="@drawable/lb_btnp_small"
+            android:gravity="center"
+            android:paddingLeft="@dimen/btnPadding2"
+            android:paddingTop="@dimen/btnPadding2"
+            android:text="@string/btnStat" />
 
 
     </LinearLayout>

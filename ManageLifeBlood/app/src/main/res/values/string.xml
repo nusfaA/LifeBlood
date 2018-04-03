@@ -11,4 +11,12 @@
     <string name="lblDOB" translatable="false">Date of Birth</string>
     <string name="lblContactNum" translatable="false">Contact Number</string>
     <string name="lblEmail" translatable="false">Email</string>
+    <string name="lblLocationCode">Location Code</string>
+    <string name="lblbloodgroup">Blood Group</string>
+    <string name="lblyear">Year</string>
+    <string name="lblquarter">Quarter</string>
+    <string name="lblqrequired">Quantity Required</string>
+    <string name="lblqsupplied">Quantity Supplied</string>
+    <string name="lbldate">Created Date</string>
+    <string name="lblbtnsubmit">Submit</string>
 </resources>

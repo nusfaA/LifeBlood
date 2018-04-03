@@ -4,52 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.graise.ansafn.managelifeblood.ActivityUserreg">
+    tools:context="com.graise.ansafn.managelifeblood.ActivityUserreg"
+    android:orientation="vertical">
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mainTextMargin"
             android:text="@string/lblFirstName"
-            android:textColor="@android:color/black" />
-
+            android:layout_margin="@dimen/mainTextMargin"
+            android:textColor="@android:color/black"/>
         <EditText
             android:id="@+id/edtFName"
+            android:hint="Enter First Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mainTextMargin"
-            android:hint="Enter First Name" />
+            android:layout_margin="@dimen/mainTextMargin"/>
     </LinearLayout>
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mainTextMargin"
             android:text="@string/lblLastName"
-            android:textColor="@android:color/black" />
-
+            android:layout_margin="@dimen/mainTextMargin"
+            android:textColor="@android:color/black"/>
         <EditText
             android:id="@+id/edtLName"
+            android:hint="Enter Last Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mainTextMargin"
-            android:hint="Enter Last Name" />
+            android:layout_margin="@dimen/mainTextMargin"/>
     </LinearLayout>
 
-    j
-
-    <LinearLayout
+j    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -57,10 +51,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:layout_margin="@dimen/mainTextMargin"
             android:text="@string/lblDOB"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:layout_gravity="center_vertical" />
 
         <ImageButton
             android:id="@+id/btnCalander"
@@ -74,67 +68,59 @@
             android:id="@+id/disDob"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_margin="@dimen/mainTextMargin" />
+            android:layout_margin="@dimen/mainTextMargin"
+            android:layout_gravity="center_vertical"/>
 
     </LinearLayout>
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mainTextMargin"
             android:text="@string/lblContactNum"
-            android:textColor="@android:color/black" />
-
+            android:layout_margin="@dimen/mainTextMargin"
+            android:textColor="@android:color/black"/>
         <EditText
             android:id="@+id/edtContactNum"
+            android:hint="Enter Contact Number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mainTextMargin"
-            android:hint="Enter Contact Number" />
+            android:layout_margin="@dimen/mainTextMargin"/>
     </LinearLayout>
 
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mainTextMargin"
             android:text="@string/lblEmail"
-            android:textColor="@android:color/black" />
-
+            android:layout_margin="@dimen/mainTextMargin"
+            android:textColor="@android:color/black"/>
         <EditText
             android:id="@+id/edtEmail"
+            android:hint="Enter Email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/mainTextMargin"
-            android:hint="Enter Email" />
+            android:layout_margin="@dimen/mainTextMargin"/>
     </LinearLayout>
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
-
+        android:gravity="center">
         <Button
             android:id="@+id/btnSave"
-            android:layout_width="wrap_content"
+            android:text="@string/btnSignUp"
+            android:layout_width="@dimen/btnWidth"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/basicMargin"
-            android:background="@drawable/lb_btng_small"
-            android:gravity="center"
-            android:paddingLeft="@dimen/btnPaddingLeft"
-            android:paddingTop="@dimen/btnPadding"
-            android:text="@string/btnSignUp" />
+            android:layout_margin="@dimen/btnMargin"
+            />
 
     </LinearLayout>
 

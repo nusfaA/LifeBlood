@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/leftMargin"
+    android:gravity="center"
+    tools:context="com.graise.ansafn.lifeblood.ActivityExistingDonor">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Hi User"
+        android:textSize="24dp" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:columnCount="2">
+
+        <Button
+            android:id="@+id/btnChkEligibility"
+            android:layout_width="@dimen/btnWidth"
+            android:layout_height="@dimen/btnHeight2"
+            android:layout_margin="@dimen/mainTextMargin"
+            android:background="#b37477"
+            android:onClick="checkEligibility"
+            android:text="Check my Eligibility"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+
+        <Button
+            android:id="@+id/btnViewReq"
+            android:layout_width="@dimen/btnWidth"
+            android:layout_height="@dimen/btnHeight2"
+            android:layout_margin="@dimen/mainTextMargin"
+            android:text="View Request/Make Appointment"
+            android:textSize="22dp" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="@dimen/btnWidth"
+            android:layout_height="@dimen/btnHeight2"
+            android:layout_margin="@dimen/mainTextMargin"
+            android:text="Edit My Info"
+            android:textSize="22dp" />
+
+        <Button
+            android:id="@+id/btnContact"
+            android:layout_width="@dimen/btnWidth"
+            android:layout_height="@dimen/btnHeight2"
+            android:layout_margin="@dimen/mainTextMargin"
+            android:background="#b37477"
+            android:text="Contact a Medical Practitioner"
+            android:textColor="#ffffff"
+            android:textSize="22dp" />
+    </GridLayout>
+
+</RelativeLayout>

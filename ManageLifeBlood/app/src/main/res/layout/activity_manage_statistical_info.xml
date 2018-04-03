@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/mainTextMargin"
+    android:orientation="vertical"
+    tools:context="com.graise.ansafn.managelifeblood.ActivityManageStatisticalInfo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/locationCode"
+            android:layout_width="@dimen/tvwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/lblLocationCode"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="35dp" />
+
+        <EditText
+            android:id="@+id/editlocationCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Enter the Location Code"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="35dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bloodgroup"
+            android:layout_width="@dimen/tvwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/lblbloodgroup"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="98dp" />
+
+        <EditText
+            android:id="@+id/editbloodgroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Enter the Blood Group"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="98dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="@dimen/tvwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/lblyear"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <EditText
+            android:id="@+id/edityear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Enter the year"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="148dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/quarter"
+            android:layout_width="@dimen/tvwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/lblquarter"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="194dp" />
+
+        <EditText
+            android:id="@+id/editquarter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Which quarter of the year"
+            tools:layout_editor_absoluteX="153dp"
+            tools:layout_editor_absoluteY="194dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/qrequired"
+            android:layout_width="@dimen/tvwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/lblqrequired"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="251dp" />
+
+        <EditText
+            android:id="@+id/editqrequired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Enter the Quantity required"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="251dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/qsupplied"
+            android:layout_width="@dimen/tvwidth"
+            android:layout_height="wrap_content"
+            android:text="@string/lblqsupplied"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="304dp" />
+
+        <EditText
+            android:id="@+id/editqsupplied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Enter the quantity supplied"
+            tools:layout_editor_absoluteX="152dp"
+            tools:layout_editor_absoluteY="304dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/tvwidth"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/lbldate"
+            />
+
+        <ImageButton
+            android:id="@+id/btnCalander"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/btnSave"
+            android:src="@drawable/ic_calander" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/mainTextMargin" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/lb_btng_small"
+        android:paddingTop="@dimen/leftMargin"
+        android:text="Submit"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="431dp" />
+</LinearLayout>

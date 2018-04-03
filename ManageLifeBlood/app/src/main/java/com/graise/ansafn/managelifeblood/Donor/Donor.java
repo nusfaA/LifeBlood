@@ -1,4 +1,4 @@
-package com.graise.ansafn.lifeblood.Donor;
+package com.graise.ansafn.managelifeblood.Donor;
 
 /**
  * Created by ansaf.n on 2/23/2018.
@@ -7,11 +7,9 @@ package com.graise.ansafn.lifeblood.Donor;
 public class Donor {
 
     private Id _id;
-    private String username;
-    private String name_first;
-    private String name_last;
-
     private String userId;
+    private String userName;
+    private String mobile;
     private String bloodGroup;
     private String locCode;
     private int noOfDonations;
@@ -19,36 +17,17 @@ public class Donor {
     private String processedDate;
     private String status;
 
+
+    private String dob;
+    private String age;
+    private String address;
+
     public Id get_id() {
         return _id;
     }
 
     public void set_id(Id _id) {
         this._id = _id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getName_first() {
-        return name_first;
-    }
-
-    public void setName_first(String name_first) {
-        this.name_first = name_first;
-    }
-
-    public String getName_last() {
-        return name_last;
-    }
-
-    public void setName_last(String name_last) {
-        this.name_last = name_last;
     }
 
     public String getUserId() {
@@ -105,5 +84,45 @@ public class Donor {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getDob() {
+        return dob;
+    }
+
+    public void setDob(String dob) {
+        this.dob = dob;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

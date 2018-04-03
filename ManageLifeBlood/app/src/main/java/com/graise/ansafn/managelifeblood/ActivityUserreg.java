@@ -20,6 +20,11 @@ import android.widget.TextView;
 import java.util.Calendar;
 import java.util.Random;
 
+/**
+ * Created by ansaf.n on 21/3/2018.
+ * Summary : registration for admin user and medical practitioners
+ */
+
 public class ActivityUserreg extends AppCompatActivity {
 
     private static final String TAG = "ActivityUserreg";

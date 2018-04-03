@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -13,8 +14,8 @@
         android:layout_marginRight="40dp"
         android:layout_marginTop="100dp"
         android:gravity="center"
-        android:text="TextView"
-        android:textSize="12pt" />
+        android:text=""
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/btnyes"
@@ -22,8 +23,9 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/tvQuestion"
         android:layout_below="@+id/tvQuestion"
-        android:layout_marginStart="116dp"
+        android:layout_marginStart="130dp"
         android:layout_marginTop="69dp"
+        android:textSize="20dp"
         android:text="YES" />
 
     <Button
@@ -32,7 +34,18 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/tvQuestion"
         android:layout_alignTop="@+id/btnyes"
-        android:layout_marginEnd="110dp"
+        android:layout_marginEnd="130dp"
+        android:textSize="20dp"
         android:text="NO" />
+
+    <ImageButton
+        android:id="@+id/imgHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="61dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_home" />
 
 </RelativeLayout>

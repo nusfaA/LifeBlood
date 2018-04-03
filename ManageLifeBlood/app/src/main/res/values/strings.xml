@@ -15,4 +15,8 @@
     <string name="lblPassword">Password</string>
     <string name="btnSignUp">Sign Up</string>
     <string name="btnLogIn">Log In</string>
+    <string name="btnProcessDonorReq">Process Donor Requests</string>
+    <string name="noreqfound">No Requests Found</string>
+    <string name="nousersfound">No Users Found</string>
+    <string name="btnStat">Manage Statistical Info</string>
 </resources>

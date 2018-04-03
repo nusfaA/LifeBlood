@@ -3,6 +3,7 @@
     package="com.graise.ansafn.managelifeblood">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -22,7 +23,9 @@
         <activity android:name=".ActivityMngcriteria" />
         <activity android:name=".ActivityUserreg" />
         <activity android:name=".ActivityStockManagement" />
-        <activity android:name=".ActivityLogin"></activity>
+        <activity android:name=".ActivityLogin" />
+        <activity android:name=".ActivityProcessDonorReq"></activity>
+        <activity android:name=".ActivityManageStatisticalInfo"></activity>
     </application>
 
 </manifest>

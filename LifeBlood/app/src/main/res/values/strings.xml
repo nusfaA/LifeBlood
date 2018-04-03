@@ -15,6 +15,10 @@
     <string name="address_line">Enter Address</string>
     <string name="enter_age">Enter Age</string>
     <string name="entername">Enter Name</string>
+    <string name="register">Register</string>
+    <string name="eligDetect">Eligibility Detection</string>
+    <string name="start">Start</string>
+    <string name="skip">Skip</string>
     <string-array name="lblbloodgroup_arrays">
         <item>A+(Positive)</item>
         <item>A-(Negative)</item>

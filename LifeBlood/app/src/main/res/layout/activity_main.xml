@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
+    android:gravity="center"
     android:orientation="horizontal"
     tools:context="com.graise.ansafn.lifeblood.ActivityMain">
 
@@ -24,7 +25,7 @@
 
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_weight="0.5"
@@ -33,13 +34,37 @@
 
         <Button
             android:id="@+id/btnSignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/btnMargin"
-            android:text="@string/becomeDonor"
-            android:background="@drawable/lb_btnp_small"/>
+            android:layout_width="@dimen/btnWidth"
+            android:layout_height="@dimen/btnHeight"
+            android:layout_margin="@dimen/mainTextMargin"
+            android:background="@drawable/lb_btnp_small"
+            android:paddingLeft="@dimen/leftMargin"
+            android:paddingTop="@dimen/leftMargin"
+            android:text="@string/becomeDonor" />
+
+        <Button
+            android:id="@+id/btnTempRegister"
+            android:layout_width="@dimen/btnWidth"
+            android:layout_height="@dimen/btnHeight"
+            android:layout_below="@+id/btnSignUp"
+            android:layout_margin="@dimen/mainTextMargin"
+            android:background="@drawable/lb_btnp_small"
+            android:paddingLeft="@dimen/leftMargin"
+            android:paddingTop="@dimen/leftMargin"
+            android:text="@string/register" />
+
+        <Button
+            android:id="@+id/btnEligDetect"
+            android:layout_width="@dimen/btnWidth"
+            android:layout_height="@dimen/btnHeight"
+            android:layout_below="@+id/btnTempRegister"
+            android:layout_margin="@dimen/mainTextMargin"
+            android:background="@drawable/lb_btnp_small"
+            android:paddingLeft="@dimen/leftMargin"
+            android:paddingTop="@dimen/leftMargin"
+            android:text="@string/eligDetect" />
 
 
-    </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>

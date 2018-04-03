@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/leftMargin"
-    android:background="@color/lbGreen"
+    android:layout_margin="@dimen/btnMargin"
+    android:background="@color/lbDarkGray"
     android:orientation="vertical">
 
     <TextView
@@ -15,8 +15,8 @@
         android:layout_marginBottom="@dimen/mainTextMargin"
         android:layout_marginLeft="@dimen/leftMargin"
         android:text="@string/noreqfound"
-        android:textColor="@color/lbRed"
-        android:textSize="@dimen/mediumText" />
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/lblMText" />
 
     <TextView
         android:id="@+id/txtQuantity"
@@ -25,7 +25,7 @@
         android:layout_marginBottom="@dimen/mainTextMargin"
         android:layout_marginLeft="@dimen/btnMargin"
         android:textColor="@android:color/black"
-         />
+        android:textSize="@dimen/lblMText" />
 
     <TextView
         android:id="@+id/txtDate"
@@ -34,6 +34,11 @@
         android:layout_marginBottom="@dimen/mainTextMargin"
         android:layout_marginLeft="@dimen/btnMargin"
         android:textColor="@android:color/black"
-       />
+        android:textSize="@dimen/lblMText" />
+
+    <ListView
+        android:id="@+id/lstDnrDet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
 
 </LinearLayout>
