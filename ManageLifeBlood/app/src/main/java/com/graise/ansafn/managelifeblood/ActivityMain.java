@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+/**
+ * Created by ansaf.n on 3/14/2018.
+ * Summary : launcher for Manage Life Blood Application
+ */
+
 public class ActivityMain extends AppCompatActivity {
 
     Button btnSgnUp, btnLogIn;

@@ -15,6 +15,7 @@ public class Common {
     public static String ELIGIBILITY_COLLECTION = "eligibilitycriteria";
     public static String DONATION_REQ_COLLECTION = "requests";
     public static String STAT_COLLECTION = "statisticalInfo";
+    public static String ITEM_QTY = "itemquantity";
     private static String DB_LB_REG = "lifebloodreg";
     public static String USER_REG_COLLECTION = "user_registration";
     public static String DONOR_COLLECTION = "donor";
@@ -79,6 +80,14 @@ public class Common {
         String baseUrl = String.format("https://api.mlab.com/api/1/databases/%s/collections/%s", DB_LB_MNG, STAT_COLLECTION);
         StringBuilder stringBuilder = new StringBuilder(baseUrl);
         stringBuilder.append("?apiKey=" + API_KEY);
+        return stringBuilder.toString();
+    }
+
+    //DonationTypeQty itemQty
+    public static String getItemQty() {
+        String baseUrl = String.format("https://api.mlab.com/api/1/databases/%s/collections/%s", DB_LB_MNG, ITEM_QTY);
+        StringBuilder stringBuilder = new StringBuilder(baseUrl);
+        stringBuilder.append("?apiKey=" + API_KEY); //"/"+itemQty.getId()+
         return stringBuilder.toString();
     }
 }

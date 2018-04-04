@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:columnCount="2">
+
+    <LinearLayout
+        android:id="@+id/lnrLayout"
+        android:layout_width="100dp"
+        android:layout_column="0"
+        android:layout_margin="20dp"
+        android:background="#f2b1b1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtItemId"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mainTextMargin"
+            android:layout_marginTop="@dimen/mainTextMargin"
+            android:gravity="center"
+            android:text="Item Id"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mainTextMargin"
+            android:layout_marginTop="@dimen/mainTextMargin"
+            android:text="Donation Type"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtQty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/mainTextMargin"
+            android:layout_marginTop="@dimen/mainTextMargin"
+            android:text="Quantity"
+            android:textColor="@android:color/black" />
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+    <!--android:layout_column="1"-->
+    <!--android:orientation="vertical"-->
+    <!--android:layout_margin="20dp"-->
+    <!--android:backgroundTint="#f2b1b1">-->
+    <!--<TextView-->
+    <!--android:id="@+id/txtItemId"-->
+    <!--android:layout_width="50dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="Item Id"-->
+    <!--android:textColor="@android:color/black"-->
+    <!--android:layout_marginLeft="@dimen/mainTextMargin"-->
+    <!--android:layout_marginTop="@dimen/mainTextMargin"-->
+    <!--android:gravity="center"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/txtItemName"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="@dimen/mainTextMargin"-->
+    <!--android:layout_marginTop="@dimen/mainTextMargin"-->
+    <!--android:text="Donation Type"-->
+    <!--android:textColor="@android:color/black" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/g"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+
+    <!--android:layout_marginLeft="@dimen/mainTextMargin"-->
+    <!--android:layout_marginTop="@dimen/mainTextMargin"-->
+    <!--android:text="Quantity"-->
+    <!--android:textColor="@android:color/black" />-->
+    <!--</LinearLayout>-->
+</GridLayout>

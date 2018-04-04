@@ -20,6 +20,11 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by ansaf.n on 3/12/2018.
+ * Summary : Authenticate Admin users
+ */
+
 public class ActivityLogin extends AppCompatActivity {
 
     Button btnLogIn;

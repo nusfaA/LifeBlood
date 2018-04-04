@@ -18,6 +18,11 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by ansaf.n on 3/16/2018.
+ * Summary : Manage the criteria for eligibility for donor eligibility detection
+ */
+
 public class ActivityMngcriteria extends AppCompatActivity {
 
     private static final String TAG = "ActivityMngCri";
